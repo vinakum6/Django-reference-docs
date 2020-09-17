@@ -1,0 +1,19 @@
+<!DOCTYPE html5>
+<html>
+<head>
+<title> Music Albums for Sales</title>
+</head>
+<body>
+<h1 style="text-decoration:underline"> Welcome to My Music Albums </h1>
+{% if  all_albums %}
+<ul> {% for album in all_albums %}
+<li> <!--<a href="/music/{{ album.id }}/"> old style usage of hard code url-->
+   <!--<a href= "{% url 'music:detail' album.id %}"> {{ album.album_title }}</a></li> -->
+   <a href= "{% url 'music:favorite' album.id %}"> {{ album.album_title }}</a></li>
+	{% endfor %}
+</ul>
+{% else %}
+<h1> Oops! Please Bare with us we don't have Albums to upload!!! We will upload soon... </h1>
+{% endif %}
+</body>
+</html>

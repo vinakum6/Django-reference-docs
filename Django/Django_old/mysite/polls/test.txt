@@ -1,0 +1,14 @@
+db.posts.insert({
+title:'Post One',
+body:'Body of post one',
+category:'News',
+likes:4,
+tags:['news','events'],
+user:{
+      name:'John Doe',
+      Status:'author'},
+date:Date()
+})
+
+
+Scheduling tasks on windows task scheduler to run the Python scripts to generate reports for frequent interval of times and also send email alerts

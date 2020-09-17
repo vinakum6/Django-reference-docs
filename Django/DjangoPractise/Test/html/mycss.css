@@ -1,0 +1,56 @@
+h1, h2, h3, h4, h5, h6 {
+color: #328787;
+font-family: cursive,Georgia, sans-serif;
+}
+
+body {margin:20px 20px 20px 20px;
+text-align: center;
+padding: 10px 10px 10px 10px;
+text-decoration:blink;
+background-color: rgb(10,20,30); 
+background-attachment:fixed;
+white-space: nowrap;}
+
+/* asset/css/my_css.css */
+
+ /*class selection*/
+ .c_head{
+ font-family: cursive;
+ color: orange; /*override the blue color*/
+ }
+
+
+ /*id selection*/
+ #i_head{
+ color: red;
+ }
+
+#container{
+width: 70%;
+margin: 20px;
+padding: 20px;
+border: 1px solid #999;
+background: #ffffff;
+}
+ /*element selection*/
+ p {
+ font-variant: small-caps;
+ color:blue
+}
+
+span[my_id] { /* select 'span' with attribute 'my_id' */
+color: green;
+font-weight: bold
+}
+span[my_id=m_span] { /* select 'span' with attribute 'my_id = m_span' */
+color: red;
+}
+
+span[my_id]:hover, p:hover {
+background-color: yellow;
+}
+
+a.test:visited {color: yellow;}
+#test a:link{color: grey;} 
+#test a:active {color: red;}
+a:hover {color: black;}

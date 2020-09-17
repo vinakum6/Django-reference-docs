@@ -1,0 +1,28 @@
+Django ORM Steps and Commands --
+=============================
+
+1) import class in models 
+2) creating object for the class.These can be done in two ways
+     
+	i) album = Album()
+	   album.artist = 'XXX'
+	   album.album_title = 'XXX'
+	   album.genere = 'XXX'
+	   album.album_logo = 'XXX'
+	   
+	2) album = Album(artist='XXX',album_title='XXX',genere='XXX',album_logo='XXX')
+	
+3) To save the record in Database (album.save())
+4) To retrievw record 
+    album.objects.all() --will show all objects 
+    album.objects.get(id=X) --to retrievw specific record
+	album.song_set.all() -- to retrievw all foreign key class data
+	
+	
+5) To create a new record of child class 
+
+	album.song_set.create(song_title='XXX',file_type='XXX') --need to give class name in small case 
+
+6) to count the total records 
+		album.song_set.count()
+

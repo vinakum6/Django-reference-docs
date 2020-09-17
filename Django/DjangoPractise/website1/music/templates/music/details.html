@@ -1,0 +1,47 @@
+<!DOCTYPE html5>
+<html>
+<head>
+<title> Music Albums for Sales</title>
+</head>
+<body style="background-color:pink">
+<img src="{{ album.album_logo }}" alt='Oops image not found at -"{{album.album_logo}}"' width =400px height=400px >
+<h1 style="text-decoration:underline;color:grey"> "{{ album }}" -- album details:</h1>
+<table border=1 bordercolor="grey">
+<tr>
+<th>Artist</th>
+<th>Album Title</th>
+<th>Genere</th>
+<th>Album Location</th>
+</tr>
+<tr> 
+<td>{{ album.artist }}</td>
+<td>{{ album.album_title }}</td>
+<td>{{ album.genere }}</td>
+<td>{{ album.album_logo }}</td>
+</tr>
+
+</table>
+<br><br>
+{% if album.song_set.all %}
+<h1 style="text-decoration:underline;color:grey"> Album List  </h1>
+<table border=1 bordercolor="grey">
+<tr>
+<th>Song Title</th>
+<th>File Type</th>
+</tr>
+{% for song in album.song_set.all %}
+<tr> 
+<td>{{ song.song_title }}</td>
+<td>{{ song.file_type }}</td>
+</tr>
+{% endfor%}
+{% else %} 
+<h1 style="color:grey"> No Songs found under this album</h1>
+{% endif %}
+</table>
+
+
+
+
+</body>
+</html>
