@@ -1,0 +1,35 @@
+Auto deploy :
+<plugin>
+         <groupId>org.apache.tomcat.maven</groupId>
+        <artifactId>tomcat7-maven-plugin</artifactId>
+        <version>2.2</version>
+   <configuration>
+ <url>http://localhost:8090/manager/text</url>
+               <username>deployer</username>
+               <password>deployer</password>
+    </configuration>
+</plugin>
+
+C:\Program Files\Apache Software Foundation\Tomcat 9.0\conf\tomcat-users.xml
+
+
+<plugin>
+         <groupId>org.apache.tomcat.maven</groupId>
+        <artifactId>tomcat7-maven-plugin</artifactId>
+        <version>2.2</version>
+   <configuration>
+ <url>http://localhost:8080/manager/text</url>
+               <username>admin</username>
+               <password>admin</password>
+    </configuration>
+</plugin>
+
+
+<user username="admin" password="admin" roles="admin-gui,manager-gui,manager-script" />
+
+
+convert direct execution to indirect execution 
+
+deploy 
+
+package it need to deploy
